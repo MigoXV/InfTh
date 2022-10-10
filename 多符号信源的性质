@@ -1,0 +1,52 @@
+# 条件熵的性质
+
+
+
+## 非递增性
+
+$$
+H\left(X_N / X_1 X_2 \cdots X_{N-1}\right) \leqslant H\left(X_{N-1} / X_1 X_2 \cdots X_{N-2}\right)
+$$
+
+证明：
+$$
+\begin{aligned}
+H\left(X_N / X_1 X_2 \ldots X_{N-1}\right) & \leq H\left(X_N / X_2 \ldots X_{N-1}\right) \text { 条件熵小于等于无条件熵 } \\
+&=H\left(X_{N-1} / X_1 X_2 \ldots X_{N-2}\right) \quad \text { 序列的平稳性 } \\
+& \leq H\left(X_{N-1} / X_2 \ldots X_{N-2}\right) \quad \text { 同理 } \\
+&=H\left(X_{N-2} / X_1 \ldots X_{N-3}\right) \\
+& \leq H\left(X_3 / X_1 X_2\right) \\
+& \leq H\left(X_2 / X_1\right) \\
+& \leq H\left(X_1\right)
+\end{aligned}
+$$
+说明：记忆长度越长，条件熵越小，也就是序列的统计约束关系增加，不确定性减少。
+
+## 平均符号熵大于等于条件熵且非负
+
+$$
+H_N(\vec{X}) \geq H\left(X_N / X_1 X_2 \cdots X_{N-1}\right)\\
+?
+$$
+
+证明：
+
+## 平均符号熵非递增性
+
+$$
+0 \leq H_N(\vec{X}) \leq H_{N-1}(\vec{X}) \leq H_{N-2}(\vec{X}) \leq \cdots \leq H(X)
+$$
+
+这表明, $N$ 维离散平稳有记忆信源 $\vec{X}=X_1 X_2 \cdots X_N$ 的平均 符号熵 $H_N(\vec{X})=H_N\left(X_1 X_2 \cdots X_N\right)$ 不仅具有非负性, 而且它的最 大值等于离散平稳有记忆信源 $X$ 在起始时刻的信息熵 $H(X)$, 而且序列的统计约束关系增加, 由于符号间的相关性, 平均 每个符号所携带的信息量减少。
+
+## 信源的剩余度与信息变差?
+
+?
+
+## 极限熵的存在性
+
+$$
+
+$$
+
+这表明, 对于记忆长度 $N$ 足够长 $N \rightarrow \infty$ 的离散平稳有记 忆信源 $X$, 每发一个符号提供的平均信息量, 即极限熵 $H_{\infty}$, 等于条件熵 $H\left(X_N / X_1 X_2 \cdots X_{N-1}\right)$ 在 $N \rightarrow \infty$ 时的极限值。
